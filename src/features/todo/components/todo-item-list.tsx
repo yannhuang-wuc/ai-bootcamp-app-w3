@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Inbox,
   LockIcon,
   MoreVerticalIcon,
   PencilIcon,
@@ -65,6 +66,26 @@ export const TodoItemList = ({ todos }: { todos: Todo[] }) => {
           onOpenChange={setIsLoginDialogOpen}
         />
       </>
+    );
+  }
+
+  if (todos.length === 0) {
+    return (
+      <div className='inset-0 bg-primary-foreground h-full rounded-lg flex items-center justify-center'>
+        <div className='text-center space-y-4 p-6'>
+          <div className='flex justify-center'>
+            <div className='rounded-full bg-primary/10 p-4'>
+              <Inbox className='h-12 w-12 text-primary' />
+            </div>
+          </div>
+          <div className='space-y-2'>
+            <h3 className='text-2xl font-bold'>No todos found</h3>
+            <p className='text-muted-foreground max-w-sm'>
+              You don't have any todos yet. Create one to get started.
+            </p>
+          </div>
+        </div>
+      </div>
     );
   }
 

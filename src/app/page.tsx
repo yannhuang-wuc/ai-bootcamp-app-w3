@@ -73,7 +73,7 @@ export default async function Page() {
       {/* Header with User Profile */}
       <header className='sticky top-0 z-50 w-full border-b bg-background'>
         <div className='flex h-16 items-center justify-between px-4'>
-          <h1 className='text-2xl font-bold'>WUC Todo App</h1>
+          <h1 className='text-2xl font-bold'>WUC Todo</h1>
           <UserProfile />
         </div>
       </header>
