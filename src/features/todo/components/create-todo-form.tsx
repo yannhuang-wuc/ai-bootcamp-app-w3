@@ -28,58 +28,14 @@ import type { CreateTodoSchemaType } from "@/features/todo/utils/schemas";
 import { CreateTodoSchema } from "@/features/todo/utils/schemas";
 import { createTodo } from "../server/actions";
 
-const DUMMY_TODOS = [
-  {
-    title: "Buy groceries for the week",
-    description: "Get milk, eggs, bread, fruits, vegetables, and other essentials from the supermarket",
-  },
-  {
-    title: "Schedule dentist appointment",
-    description: "Call the dental clinic to book a checkup appointment for next month",
-  },
-  {
-    title: "Finish reading current book",
-    description: "Complete the last three chapters and write a brief review",
-  },
-  {
-    title: "Plan weekend trip",
-    description: "Research destinations, book accommodation, and create an itinerary for the family vacation",
-  },
-  {
-    title: "Exercise for 30 minutes",
-    description: "Go for a jog in the park or do a home workout routine",
-  },
-  {
-    title: "Call mom and catch up",
-    description: "Have a video call to check in and share recent updates",
-  },
-  {
-    title: "Organize home office",
-    description: "Declutter desk, file documents, and clean up workspace for better productivity",
-  },
-  {
-    title: "Pay monthly bills",
-    description: "Review and pay electricity, internet, and credit card bills before due date",
-  },
-  {
-    title: "Learn a new recipe",
-    description: "Try making homemade pasta or baking sourdough bread this weekend",
-  },
-  {
-    title: "Clean out email inbox",
-    description: "Unsubscribe from unwanted newsletters and organize important emails into folders",
-  },
-];
-
-export const CreateTodoForm = () => {
+export const CreateTodoForm = ({
+  randomTodo,
+}: {
+  randomTodo: { title: string; description: string };
+}) => {
   const [isPending, startTransition] = useTransition();
   const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false);
   const { session } = User();
-
-  // Randomly select a dummy todo on mount
-  const randomTodo = useMemo(() => {
-    return DUMMY_TODOS[Math.floor(Math.random() * DUMMY_TODOS.length)];
-  }, []);
 
   const form = useForm<CreateTodoSchemaType>({
     resolver: zodResolver(CreateTodoSchema),
