@@ -4,7 +4,7 @@
 # Note: This configuration pulls from a PUBLIC repository
 # No authentication required for pulling images
 
-version: '3.9'
+version: "3.9"
 
 services:
   # Next.js Application
@@ -19,6 +19,7 @@ services:
       - DATABASE_URL=${DATABASE_URL}
       - BETTER_AUTH_SECRET=${BETTER_AUTH_SECRET}
       - BETTER_AUTH_URL=${BETTER_AUTH_URL}
+      - NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL}
       - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
       - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
     healthcheck:
