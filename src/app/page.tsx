@@ -76,8 +76,10 @@ export default async function Page() {
             <div className='flex size-9 items-center justify-center rounded-xl bg-primary/10'>
               <CheckCircle2Icon className='size-5 text-primary' />
             </div>
-            <h1 className='text-xl font-semibold tracking-tight' style={{ fontFamily: 'var(--font-outfit)' }}>
-              WUC Todo
+            <h1
+              className='text-xl font-semibold tracking-tight'
+              style={{ fontFamily: "var(--font-outfit)" }}>
+              WUC Todo v2
             </h1>
           </div>
           <ThemeToggle />
@@ -96,7 +98,7 @@ export default async function Page() {
 
             <h2
               className='text-gradient text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl'
-              style={{ fontFamily: 'var(--font-outfit)' }}>
+              style={{ fontFamily: "var(--font-outfit)" }}>
               Manage Your Todos
             </h2>
 
@@ -109,21 +111,27 @@ export default async function Page() {
             {totalCount > 0 && (
               <div className='flex items-center justify-center gap-8 pt-4'>
                 <div className='text-center'>
-                  <p className='text-3xl font-bold text-primary' style={{ fontFamily: 'var(--font-outfit)' }}>
+                  <p
+                    className='text-3xl font-bold text-primary'
+                    style={{ fontFamily: "var(--font-outfit)" }}>
                     {totalCount}
                   </p>
                   <p className='text-sm text-muted-foreground'>Total Tasks</p>
                 </div>
                 <div className='h-8 w-px bg-border' />
                 <div className='text-center'>
-                  <p className='text-3xl font-bold text-primary' style={{ fontFamily: 'var(--font-outfit)' }}>
+                  <p
+                    className='text-3xl font-bold text-primary'
+                    style={{ fontFamily: "var(--font-outfit)" }}>
                     {completedCount}
                   </p>
                   <p className='text-sm text-muted-foreground'>Completed</p>
                 </div>
                 <div className='h-8 w-px bg-border' />
                 <div className='text-center'>
-                  <p className='text-3xl font-bold text-primary' style={{ fontFamily: 'var(--font-outfit)' }}>
+                  <p
+                    className='text-3xl font-bold text-primary'
+                    style={{ fontFamily: "var(--font-outfit)" }}>
                     {totalCount - completedCount}
                   </p>
                   <p className='text-sm text-muted-foreground'>Remaining</p>
