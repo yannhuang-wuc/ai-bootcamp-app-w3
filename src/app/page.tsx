@@ -79,7 +79,7 @@ export default async function Page() {
             <h1
               className='text-xl font-semibold tracking-tight'
               style={{ fontFamily: "var(--font-outfit)" }}>
-              WUC Todo v2
+              WUC Todo v2-2026.02.06 09:32am
             </h1>
           </div>
           <ThemeToggle />
