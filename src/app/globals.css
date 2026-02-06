@@ -47,7 +47,7 @@
 :root {
   --radius: 0.75rem;
   /* Warm ivory/cream base */
-  --background: oklch(0.98 0.005 85);
+  --background: #e6f3ff;
   --foreground: oklch(0.18 0.02 260);
 
   /* Subtle cream cards with warmth */
