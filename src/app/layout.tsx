@@ -17,7 +17,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "WUC Todo App",
+  title: "WUC Todo v2-2026.02.06 10:14am",
   description: "Stay organized and productive with WUC Todo",
 };
 
